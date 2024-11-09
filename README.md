@@ -1,16 +1,19 @@
-## Hi there 👋
+## Hi! I'm Mahiul Kabir 👋
+### I'm a 🥷competitive programmer and 🤖robotics enthusiast, studying *CSE@IUT*
 
-<!--
-**the-NerdNinja/the-NerdNinja** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I strive to be the best version of myself, excelling in intellect, strength, and creativity. I am passionate about elegant problem-solving, robotics, and art, combining technical expertise with artistic vision to continuously grow and achieve in diverse fields.
 
-Here are some ideas to get you started:
+#### I Know
+- 🧩***C++, C, Rust***
+- 🐧***Linux***
+- 🍩***Blender***
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+#### I Know(A little)
+- 🗿***Python, Bash***
+- 👾***ROS***
+- 🏎***Raspberry Pi Pico***
+
+#### Hobbies
+- ***Calisthenics***
+- ***Architecture***
+- ***Competitive Math***
