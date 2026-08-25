@@ -1,39 +1,87 @@
 <svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Md. Mahiul Kabir banner">
   <title>Md. Mahiul Kabir</title>
-  <rect x="0" y="0" width="1200" height="260" rx="18" fill="#181825"/>
-
-  <circle cx="34" cy="30" r="6" fill="#f38ba8"/>
-  <circle cx="56" cy="30" r="6" fill="#f9e2af"/>
-  <circle cx="78" cy="30" r="6" fill="#a6e3a1"/>
-  <line x1="20" y1="50" x2="1180" y2="50" stroke="#a6adc8" stroke-width="1" opacity="0.15"/>
-
-  <text x="40" y="95" font-family="'Fira Code', Consolas, monospace" font-size="18" fill="#89b4fa" opacity="0.85">ponderer@universe:~$ whoami</text>
-  <text x="40" y="145" font-family="'Fira Code', Consolas, monospace" font-size="30" font-weight="700" fill="#cdd6f4">Md. Mahiul Kabir</text>
 
   <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap');</style>
+
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11111b"/>
+      <stop offset="55%" stop-color="#181825"/>
+      <stop offset="100%" stop-color="#1e1e2e"/>
+    </linearGradient>
+
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cdd6f4"/>
+      <stop offset="100%" stop-color="#b4befe"/>
+    </linearGradient>
+
+    <linearGradient id="panelTopEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cdd6f4" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#cdd6f4" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="lifeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f5c2e7" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#f5c2e7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lifeFade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#fff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="lifeMask">
+      <circle cx="985" cy="128" r="96" fill="url(#lifeFade)"/>
+    </mask>
+
     <clipPath id="clip0"><rect x="40" y="172" width="0" height="30">
-      <animate id="w0type" attributeName="width" from="0" to="290" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
-      <animate id="w0del" attributeName="width" from="290" to="0" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
+      <animate id="w0type" attributeName="width" from="0" to="293" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
+      <animate id="w0del" attributeName="width" from="293" to="0" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
     </rect></clipPath><clipPath id="clip1"><rect x="40" y="172" width="0" height="30">
-      <animate id="w1type" attributeName="width" from="0" to="92" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
-      <animate id="w1del" attributeName="width" from="92" to="0" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
+      <animate id="w1type" attributeName="width" from="0" to="93" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
+      <animate id="w1del" attributeName="width" from="93" to="0" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
     </rect></clipPath><clipPath id="clip2"><rect x="40" y="172" width="0" height="30">
-      <animate id="w2type" attributeName="width" from="0" to="79" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
-      <animate id="w2del" attributeName="width" from="79" to="0" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
+      <animate id="w2type" attributeName="width" from="0" to="80" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
+      <animate id="w2del" attributeName="width" from="80" to="0" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
     </rect></clipPath>
   </defs>
 
-  <text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#cba6f7" clip-path="url(#clip0)">Competitive Programmer</text><text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#94e2d5" clip-path="url(#clip1)">Athlete</text><text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#b4befe" clip-path="url(#clip2)">Artist</text>
+  <rect x="0" y="0" width="1200" height="260" rx="18" fill="url(#bgGrad)"/>
+  <circle cx="985" cy="128" r="144.0" fill="url(#lifeGlow)"/>
+  <g mask="url(#lifeMask)" filter="url(#softGlow)">
+    <path transform="translate(894.0,37.0)" d="M7,0h7v7h-7zM14,7h7v7h-7zM0,14h7v7h-7zM7,14h7v7h-7zM14,14h7v7h-7z" fill="#b4befe" fill-opacity="0.6">
+      <animate attributeName="d" calcMode="discrete" dur="9.36s" repeatCount="indefinite" values="M7,0h7v7h-7zM14,7h7v7h-7zM0,14h7v7h-7zM7,14h7v7h-7zM14,14h7v7h-7z;M0,7h7v7h-7zM14,7h7v7h-7zM7,14h7v7h-7zM14,14h7v7h-7zM7,21h7v7h-7z;M14,7h7v7h-7zM0,14h7v7h-7zM14,14h7v7h-7zM7,21h7v7h-7zM14,21h7v7h-7z;M7,7h7v7h-7zM14,14h7v7h-7zM21,14h7v7h-7zM7,21h7v7h-7zM14,21h7v7h-7z;M14,7h7v7h-7zM21,14h7v7h-7zM7,21h7v7h-7zM14,21h7v7h-7zM21,21h7v7h-7z;M7,14h7v7h-7zM21,14h7v7h-7zM14,21h7v7h-7zM21,21h7v7h-7zM14,28h7v7h-7z;M21,14h7v7h-7zM7,21h7v7h-7zM21,21h7v7h-7zM14,28h7v7h-7zM21,28h7v7h-7z;M14,14h7v7h-7zM21,21h7v7h-7zM28,21h7v7h-7zM14,28h7v7h-7zM21,28h7v7h-7z;M21,14h7v7h-7zM28,21h7v7h-7zM14,28h7v7h-7zM21,28h7v7h-7zM28,28h7v7h-7z;M14,21h7v7h-7zM28,21h7v7h-7zM21,28h7v7h-7zM28,28h7v7h-7zM21,35h7v7h-7z;M28,21h7v7h-7zM14,28h7v7h-7zM28,28h7v7h-7zM21,35h7v7h-7zM28,35h7v7h-7z;M21,21h7v7h-7zM28,28h7v7h-7zM35,28h7v7h-7zM21,35h7v7h-7zM28,35h7v7h-7z;M28,21h7v7h-7zM35,28h7v7h-7zM21,35h7v7h-7zM28,35h7v7h-7zM35,35h7v7h-7z;M21,28h7v7h-7zM35,28h7v7h-7zM28,35h7v7h-7zM35,35h7v7h-7zM28,42h7v7h-7z;M35,28h7v7h-7zM21,35h7v7h-7zM35,35h7v7h-7zM28,42h7v7h-7zM35,42h7v7h-7z;M28,28h7v7h-7zM35,35h7v7h-7zM42,35h7v7h-7zM28,42h7v7h-7zM35,42h7v7h-7z;M35,28h7v7h-7zM42,35h7v7h-7zM28,42h7v7h-7zM35,42h7v7h-7zM42,42h7v7h-7z;M28,35h7v7h-7zM42,35h7v7h-7zM35,42h7v7h-7zM42,42h7v7h-7zM35,49h7v7h-7z;M42,35h7v7h-7zM28,42h7v7h-7zM42,42h7v7h-7zM35,49h7v7h-7zM42,49h7v7h-7z;M35,35h7v7h-7zM42,42h7v7h-7zM49,42h7v7h-7zM35,49h7v7h-7zM42,49h7v7h-7z;M42,35h7v7h-7zM49,42h7v7h-7zM35,49h7v7h-7zM42,49h7v7h-7zM49,49h7v7h-7z;M35,42h7v7h-7zM49,42h7v7h-7zM42,49h7v7h-7zM49,49h7v7h-7zM42,56h7v7h-7z;M49,42h7v7h-7zM35,49h7v7h-7zM49,49h7v7h-7zM42,56h7v7h-7zM49,56h7v7h-7z;M42,42h7v7h-7zM49,49h7v7h-7zM56,49h7v7h-7zM42,56h7v7h-7zM49,56h7v7h-7z;M49,42h7v7h-7zM56,49h7v7h-7zM42,56h7v7h-7zM49,56h7v7h-7zM56,56h7v7h-7z;M42,49h7v7h-7zM56,49h7v7h-7zM49,56h7v7h-7zM56,56h7v7h-7zM49,63h7v7h-7z;M56,49h7v7h-7zM42,56h7v7h-7zM56,56h7v7h-7zM49,63h7v7h-7zM56,63h7v7h-7z;M49,49h7v7h-7zM56,56h7v7h-7zM63,56h7v7h-7zM49,63h7v7h-7zM56,63h7v7h-7z;M56,49h7v7h-7zM63,56h7v7h-7zM49,63h7v7h-7zM56,63h7v7h-7zM63,63h7v7h-7z;M49,56h7v7h-7zM63,56h7v7h-7zM56,63h7v7h-7zM63,63h7v7h-7zM56,70h7v7h-7z;M63,56h7v7h-7zM49,63h7v7h-7zM63,63h7v7h-7zM56,70h7v7h-7zM63,70h7v7h-7z;M56,56h7v7h-7zM63,63h7v7h-7zM70,63h7v7h-7zM56,70h7v7h-7zM63,70h7v7h-7z;M63,56h7v7h-7zM70,63h7v7h-7zM56,70h7v7h-7zM63,70h7v7h-7zM70,70h7v7h-7z;M56,63h7v7h-7zM70,63h7v7h-7zM63,70h7v7h-7zM70,70h7v7h-7zM63,77h7v7h-7z;M70,63h7v7h-7zM56,70h7v7h-7zM70,70h7v7h-7zM63,77h7v7h-7zM70,77h7v7h-7z;M63,63h7v7h-7zM70,70h7v7h-7zM77,70h7v7h-7zM63,77h7v7h-7zM70,77h7v7h-7z;M70,63h7v7h-7zM77,70h7v7h-7zM63,77h7v7h-7zM70,77h7v7h-7zM77,77h7v7h-7z;M63,70h7v7h-7zM77,70h7v7h-7zM70,77h7v7h-7zM77,77h7v7h-7zM70,84h7v7h-7z;M77,70h7v7h-7zM63,77h7v7h-7zM77,77h7v7h-7zM70,84h7v7h-7zM77,84h7v7h-7z;M70,70h7v7h-7zM77,77h7v7h-7zM84,77h7v7h-7zM70,84h7v7h-7zM77,84h7v7h-7z;M77,70h7v7h-7zM84,77h7v7h-7zM70,84h7v7h-7zM77,84h7v7h-7zM84,84h7v7h-7z;M70,77h7v7h-7zM84,77h7v7h-7zM77,84h7v7h-7zM84,84h7v7h-7zM77,91h7v7h-7z;M84,77h7v7h-7zM70,84h7v7h-7zM84,84h7v7h-7zM77,91h7v7h-7zM84,91h7v7h-7z;M77,77h7v7h-7zM84,84h7v7h-7zM91,84h7v7h-7zM77,91h7v7h-7zM84,91h7v7h-7z;M84,77h7v7h-7zM91,84h7v7h-7zM77,91h7v7h-7zM84,91h7v7h-7zM91,91h7v7h-7z;M77,84h7v7h-7zM91,84h7v7h-7zM84,91h7v7h-7zM91,91h7v7h-7zM84,98h7v7h-7z;M91,84h7v7h-7zM77,91h7v7h-7zM91,91h7v7h-7zM84,98h7v7h-7zM91,98h7v7h-7z;M84,84h7v7h-7zM91,91h7v7h-7zM98,91h7v7h-7zM84,98h7v7h-7zM91,98h7v7h-7z;M91,84h7v7h-7zM98,91h7v7h-7zM84,98h7v7h-7zM91,98h7v7h-7zM98,98h7v7h-7z;M84,91h7v7h-7zM98,91h7v7h-7zM91,98h7v7h-7zM98,98h7v7h-7zM91,105h7v7h-7z;M98,91h7v7h-7zM84,98h7v7h-7zM98,98h7v7h-7zM91,105h7v7h-7zM98,105h7v7h-7z;M91,91h7v7h-7zM98,98h7v7h-7zM105,98h7v7h-7zM91,105h7v7h-7zM98,105h7v7h-7z;M98,91h7v7h-7zM105,98h7v7h-7zM91,105h7v7h-7zM98,105h7v7h-7zM105,105h7v7h-7z;M91,98h7v7h-7zM105,98h7v7h-7zM98,105h7v7h-7zM105,105h7v7h-7zM98,112h7v7h-7z;M105,98h7v7h-7zM91,105h7v7h-7zM105,105h7v7h-7zM98,112h7v7h-7zM105,112h7v7h-7z;M98,98h7v7h-7zM105,105h7v7h-7zM112,105h7v7h-7zM98,112h7v7h-7zM105,112h7v7h-7z;M105,98h7v7h-7zM112,105h7v7h-7zM98,112h7v7h-7zM105,112h7v7h-7zM112,112h7v7h-7z;M98,105h7v7h-7zM112,105h7v7h-7zM105,112h7v7h-7zM112,112h7v7h-7zM105,119h7v7h-7z;M112,105h7v7h-7zM98,112h7v7h-7zM112,112h7v7h-7zM105,119h7v7h-7zM112,119h7v7h-7z;M105,105h7v7h-7zM112,112h7v7h-7zM119,112h7v7h-7zM105,119h7v7h-7zM112,119h7v7h-7z;M112,105h7v7h-7zM119,112h7v7h-7zM105,119h7v7h-7zM112,119h7v7h-7zM119,119h7v7h-7z;M105,112h7v7h-7zM119,112h7v7h-7zM112,119h7v7h-7zM119,119h7v7h-7zM112,126h7v7h-7z;M119,112h7v7h-7zM105,119h7v7h-7zM119,119h7v7h-7zM112,126h7v7h-7zM119,126h7v7h-7z;M112,112h7v7h-7zM119,119h7v7h-7zM126,119h7v7h-7zM112,126h7v7h-7zM119,126h7v7h-7z;M119,112h7v7h-7zM126,119h7v7h-7zM112,126h7v7h-7zM119,126h7v7h-7zM126,126h7v7h-7z;M112,119h7v7h-7zM126,119h7v7h-7zM119,126h7v7h-7zM126,126h7v7h-7zM119,133h7v7h-7z;M126,119h7v7h-7zM112,126h7v7h-7zM126,126h7v7h-7zM119,133h7v7h-7zM126,133h7v7h-7z;M119,119h7v7h-7zM126,126h7v7h-7zM133,126h7v7h-7zM119,133h7v7h-7zM126,133h7v7h-7z;M126,119h7v7h-7zM133,126h7v7h-7zM119,133h7v7h-7zM126,133h7v7h-7zM133,133h7v7h-7z;M119,126h7v7h-7zM133,126h7v7h-7zM126,133h7v7h-7zM133,133h7v7h-7zM126,140h7v7h-7z;M133,126h7v7h-7zM119,133h7v7h-7zM133,133h7v7h-7zM126,140h7v7h-7zM133,140h7v7h-7z;M126,126h7v7h-7zM133,133h7v7h-7zM140,133h7v7h-7zM126,140h7v7h-7zM133,140h7v7h-7z;M133,126h7v7h-7zM140,133h7v7h-7zM126,140h7v7h-7zM133,140h7v7h-7zM140,140h7v7h-7z;M126,133h7v7h-7zM140,133h7v7h-7zM133,140h7v7h-7zM140,140h7v7h-7zM133,147h7v7h-7z;M140,133h7v7h-7zM126,140h7v7h-7zM140,140h7v7h-7zM133,147h7v7h-7zM140,147h7v7h-7z;M133,133h7v7h-7zM140,140h7v7h-7zM147,140h7v7h-7zM133,147h7v7h-7zM140,147h7v7h-7z;M140,133h7v7h-7zM147,140h7v7h-7zM133,147h7v7h-7zM140,147h7v7h-7zM147,147h7v7h-7z;M133,140h7v7h-7zM147,140h7v7h-7zM140,147h7v7h-7zM147,147h7v7h-7zM140,154h7v7h-7z;M147,140h7v7h-7zM133,147h7v7h-7zM147,147h7v7h-7zM140,154h7v7h-7zM147,154h7v7h-7z;M140,140h7v7h-7zM147,147h7v7h-7zM154,147h7v7h-7zM140,154h7v7h-7zM147,154h7v7h-7z;M147,140h7v7h-7zM154,147h7v7h-7zM140,154h7v7h-7zM147,154h7v7h-7zM154,154h7v7h-7z;M140,147h7v7h-7zM154,147h7v7h-7zM147,154h7v7h-7zM154,154h7v7h-7zM147,161h7v7h-7z;M154,147h7v7h-7zM140,154h7v7h-7zM154,154h7v7h-7zM147,161h7v7h-7zM154,161h7v7h-7z;M147,147h7v7h-7zM154,154h7v7h-7zM161,154h7v7h-7zM147,161h7v7h-7zM154,161h7v7h-7z;M154,147h7v7h-7zM161,154h7v7h-7zM147,161h7v7h-7zM154,161h7v7h-7zM161,161h7v7h-7z;M147,154h7v7h-7zM161,154h7v7h-7zM154,161h7v7h-7zM161,161h7v7h-7zM154,168h7v7h-7z;M161,154h7v7h-7zM147,161h7v7h-7zM161,161h7v7h-7zM154,168h7v7h-7zM161,168h7v7h-7z;M154,154h7v7h-7zM161,161h7v7h-7zM168,161h7v7h-7zM154,168h7v7h-7zM161,168h7v7h-7z;M161,154h7v7h-7zM168,161h7v7h-7zM154,168h7v7h-7zM161,168h7v7h-7zM168,168h7v7h-7z;M154,161h7v7h-7zM168,161h7v7h-7zM161,168h7v7h-7zM168,168h7v7h-7zM161,175h7v7h-7z;M168,161h7v7h-7zM154,168h7v7h-7zM168,168h7v7h-7zM161,175h7v7h-7zM168,175h7v7h-7z;M161,161h7v7h-7zM168,168h7v7h-7zM175,168h7v7h-7zM161,175h7v7h-7zM168,175h7v7h-7z;M168,161h7v7h-7zM175,168h7v7h-7zM161,175h7v7h-7zM168,175h7v7h-7zM175,175h7v7h-7z;M168,0h7v7h-7zM161,168h7v7h-7zM175,168h7v7h-7zM168,175h7v7h-7zM175,175h7v7h-7z;M168,0h7v7h-7zM175,0h7v7h-7zM175,168h7v7h-7zM161,175h7v7h-7zM175,175h7v7h-7z;M168,0h7v7h-7zM175,0h7v7h-7zM168,168h7v7h-7zM0,175h7v7h-7zM175,175h7v7h-7z;M0,0h7v7h-7zM168,0h7v7h-7zM175,0h7v7h-7zM175,168h7v7h-7zM0,175h7v7h-7z;M0,0h7v7h-7zM175,0h7v7h-7zM175,7h7v7h-7zM0,175h7v7h-7zM168,175h7v7h-7z;M0,0h7v7h-7zM168,0h7v7h-7zM0,7h7v7h-7zM175,7h7v7h-7zM0,175h7v7h-7z;M0,0h7v7h-7zM7,0h7v7h-7zM0,7h7v7h-7zM175,7h7v7h-7zM175,175h7v7h-7z;M7,0h7v7h-7zM0,7h7v7h-7zM7,7h7v7h-7zM175,7h7v7h-7zM0,175h7v7h-7z;M7,0h7v7h-7zM175,0h7v7h-7zM0,7h7v7h-7zM7,7h7v7h-7zM0,14h7v7h-7z;M7,0h7v7h-7zM7,7h7v7h-7zM175,7h7v7h-7zM0,14h7v7h-7zM7,14h7v7h-7z;M0,0h7v7h-7zM7,7h7v7h-7zM14,7h7v7h-7zM0,14h7v7h-7zM7,14h7v7h-7z"/>
+    </path>
+  </g>
+  <rect x="1" y="1" width="1198" height="258" rx="17" fill="#1e1e2e" fill-opacity="0.46" stroke="#45475a" stroke-opacity="0.55" stroke-width="1"/>
+  <rect x="1" y="1" width="1198" height="60" rx="17" fill="url(#panelTopEdge)"/>
 
-  <rect x="40" y="176" width="3" height="24" fill="#cdd6f4">
+  <circle cx="34" cy="30" r="5.5" fill="#f38ba8"/>
+  <circle cx="56" cy="30" r="5.5" fill="#f9e2af"/>
+  <circle cx="78" cy="30" r="5.5" fill="#a6e3a1"/>
+  <line x1="20" y1="50" x2="1180" y2="50" stroke="#cdd6f4" stroke-width="1" opacity="0.08"/>
+
+  <text x="40" y="95" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="18" fill="#94e2d5" opacity="0.9">ponderer@universe:~$ whoami</text>
+  <text x="40" y="145" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="30" font-weight="700" fill="url(#nameGrad)">Md. Mahiul Kabir</text>
+
+  <text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#cba6f7" clip-path="url(#clip0)">Competitive Programmer</text><text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#94e2d5" clip-path="url(#clip1)">Athlete</text><text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#b4befe" clip-path="url(#clip2)">Artist</text>
+
+  <rect x="40" y="176" width="3" height="24" fill="#f5c2e7">
     <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
-    <animate attributeName="x" from="40" to="330" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="330" to="40" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
-    <animate attributeName="x" from="40" to="132" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="132" to="40" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
-    <animate attributeName="x" from="40" to="119" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="119" to="40" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="333" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="333" to="40" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="133" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="133" to="40" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="120" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="120" to="40" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
   </rect>
 
-  <text x="1160" y="235" text-anchor="end" font-family="'Fira Code', Consolas, monospace" font-size="12" fill="#a6adc8" opacity="0.45">~/rbwkai</text>
+  <text x="1160" y="235" text-anchor="end" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="12" fill="#7f849c" opacity="0.5">~/rbwkai</text>
 </svg>
