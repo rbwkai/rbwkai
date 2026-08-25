@@ -15,15 +15,15 @@ BG = "#1e1e2e"
 
 # key -> (full label, accent color) — no github chip: the README already lives on GitHub
 CHIPS = [
-    ("resume",     "Resume",       "#f9e2af"),
-    ("linkedin",   "LinkedIn",     "#89b4fa"),
-    ("codeforces", "Codeforces",   "#cba6f7"),
-    ("atcoder",    "AtCoder",      "#94e2d5"),
-    ("cylab",      "CyLab Academy","#a6e3a1"),
-    ("wca",        "WCA",          "#f5c2e7"),
-    ("instagram",  "Instagram",    "#f38ba8"),
-    ("toph",       "Toph",         "#74c7ec"),
-    ("email",      "Email",        "#f9e2af"),
+    ("resume",     "Resume",       "#cba6f7"),  # Mauve
+    ("linkedin",   "LinkedIn",     "#89b4fa"),  # Blue
+    ("codeforces", "Codeforces",   "#74c7ec"),  # Sapphire (Blue)
+    ("atcoder",    "AtCoder",      "#89dceb"),  # Sky (Blue)
+    ("cylab",      "CyLab Academy","#a6e3a1"),  # Green
+    ("wca",        "WCA",          "#f5c2e7"),  # Pink
+    ("instagram",  "Instagram",    "#f38ba8"),  # Red
+    ("toph",       "Toph",         "#94e2d5"),  # Teal
+    ("email",      "Email",        "#b4befe"),  # Lavender
 ]
 
 # chip geometry — smaller font, wider & shorter card than the old 40px-tall version

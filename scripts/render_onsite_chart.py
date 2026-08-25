@@ -85,7 +85,7 @@ def main():
     ax.spines["bottom"].set_color(GRID)
     ax.grid(axis="y", color=GRID, linewidth=0.6, alpha=0.6)
     ax.set_axisbelow(True)
-    ax.set_title("Onsite (IUT)", color=TEXT, fontsize=12, fontfamily="monospace", loc="left", pad=10)
+    ax.set_title("Onsite (representing IUT)", color=TEXT, fontsize=12, fontfamily="monospace", loc="left", pad=10)
 
     if top20_i:
         ax.text(0.0, 1.12, f"\u25c6 top 20", transform=ax.transAxes, ha="left",

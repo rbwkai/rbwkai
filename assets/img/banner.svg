@@ -1,5 +1,5 @@
-<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Md. Mahiul Kabir banner">
-  <title>Md. Mahiul Kabir</title>
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Muhammad banner">
+  <title>Muhammad</title>
 
   <defs>
     <style>@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;display=swap');</style>
@@ -51,7 +51,7 @@
   <line x1="20" y1="50" x2="1180" y2="50" stroke="#cdd6f4" stroke-width="1" opacity="0.06"/>
 
   <text x="40" y="95" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="18" fill="#94e2d5" opacity="0.9">ponderer@universe:~$ whoami</text>
-  <text x="40" y="145" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="30" font-weight="700" fill="url(#nameGrad)">Md. Mahiul Kabir</text>
+  <text x="40" y="145" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="30" font-weight="700" fill="url(#nameGrad)">Muhammad</text>
 
   <text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#cba6f7" clip-path="url(#clip0)">Competitive Programmer</text><text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#94e2d5" clip-path="url(#clip1)">Athlete</text><text x="40" y="196" font-family="'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace" font-size="22" fill="#b4befe" clip-path="url(#clip2)">Artist</text>
 

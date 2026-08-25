@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/img/banner.svg" alt="Md. Mahiul Kabir" width="100%" />
+<img src="assets/img/banner.svg" alt="Muhammad" width="100%" />
 
 <br/><br/>
 
@@ -9,13 +9,15 @@
 <a href="https://codeforces.com/profile/rbwkai"><img src="assets/img/chips/codeforces.svg" height="30" alt="codeforces"/></a>
 <a href="https://atcoder.jp/users/rbwkai"><img src="assets/img/chips/atcoder.svg" height="30" alt="atcoder"/></a>
 <a href="https://learn.cylabacademy.org/users/rbwkai"><img src="assets/img/chips/cylab.svg" height="30" alt="cylab"/></a>
+<a href="https://www.worldcubeassociation.org/persons/https://www.worldcubeassociation.org/persons/2025KABI03"><img src="assets/img/chips/wca.svg" height="30" alt="wca"/></a>
 <a href="https://instagram.com/rbwkai"><img src="assets/img/chips/instagram.svg" height="30" alt="instagram"/></a>
+<a href="https://toph.co/u/rbwkai"><img src="assets/img/chips/toph.svg" height="30" alt="toph"/></a>
 <a href="mailto:mahiulkabir@iut-dhaka.edu"><img src="assets/img/chips/email.svg" height="30" alt="email"/></a>
 </div>
 
 <br/>
 
-Competitive programmer chasing Candidate Master on Codeforces, currently teaching IUT's next onsite batch the same DP and graph theory that got me here. Between contests I'm usually deep in a Raspberry Pi Pico project, holding a plank for a planche, or trying to read Arabic faster than I debug a segfault.
+Not your average Nerd, tho..
 
 
 <br/>

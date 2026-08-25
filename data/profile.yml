@@ -1,4 +1,4 @@
-name: "Md. Mahiul Kabir"
+name: "Muhammad"
 handle: rbwkai
 prompt: "ponderer@universe"
 identities:            # cycles in the banner's type/backspace animation, in order
@@ -10,19 +10,16 @@ identities:            # cycles in the banner's type/backspace animation, in ord
     color: "#b4befe"    # lavender
 
 bio: >
-  Competitive programmer chasing Candidate Master on Codeforces, currently teaching
-  IUT's next onsite batch the same DP and graph theory that got me here. Between
-  contests I'm usually deep in a Raspberry Pi Pico project, holding a plank for a
-  planche, or trying to read Arabic faster than I debug a segfault.
+  Not your average Nerd, tho..
 
 links:
   # no github entry — the README already lives on GitHub, a self-link is redundant
   resume: "resume/resume.pdf"                           # rendered locally from resume/resume.tex, then committed here
   linkedin: "https://linkedin.com/in/mahiulkabir"
   codeforces: "https://codeforces.com/profile/rbwkai"
-  atcoder: "https://atcoder.jp/users/rbwkai"          # TODO: confirm handle
+  atcoder: "https://atcoder.jp/users/rbwkai"         
   cylab: "https://learn.cylabacademy.org/users/rbwkai"  # formerly picoCTF, renamed to CyLab Academy
-  wca: null                                             # TODO: paste real WCA ID (format like 2023KABI01)
-  instagram: "https://instagram.com/rbwkai"             # TODO: confirm handle
-  toph: null                                            # TODO: add if wanted, e.g. https://toph.co/u/rbwkai
+  wca: "https://www.worldcubeassociation.org/persons/2025KABI03"                                             # TODO: paste real WCA ID (format like 2023KABI01)
+  instagram: "https://instagram.com/rbwkai"     
+  toph: "https://toph.co/u/rbwkai"
   email: "mahiulkabir@iut-dhaka.edu"
