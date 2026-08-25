@@ -19,6 +19,25 @@ def load_yaml(name):
     return yaml.safe_load((DATA / name).read_text())
 
 
+CHIP_ORDER = ["github", "linkedin", "codeforces", "atcoder", "picoctf", "wca", "instagram", "toph", "email"]
+
+
+def build_chip_links(profile):
+    links = profile.get("links", {})
+    out = []
+    for key in CHIP_ORDER:
+        val = links.get(key)
+        if not val:
+            continue
+        if key == "wca":
+            out.append((key, f"https://www.worldcubeassociation.org/persons/{val}"))
+        elif key == "email":
+            out.append((key, f"mailto:{val}"))
+        else:
+            out.append((key, val))
+    return out
+
+
 def main():
     achievements = load_yaml("achievements.yml")
 
@@ -29,10 +48,12 @@ def main():
     cf_line = f"Codeforces {cf['peak_title']}, peak rating {cf['peak_rating']}, {achievements['cses_solved']} problems solved on CSES"
     achievements["highlights"] = [cf_line] + achievements["highlights"]
 
+    profile = load_yaml("profile.yml")
     context = {
-        "profile": load_yaml("profile.yml"),
+        "profile": profile,
         "achievements": achievements,
         "beyond": load_yaml("beyond.yml"),
+        "chip_links": build_chip_links(profile),
         "build_date": time.strftime("%Y-%m-%d"),
     }
 

@@ -1,0 +1,4 @@
+<svg width="50" height="40" viewBox="0 0 50 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AC">
+  <rect x="0.75" y="0.75" width="48.5" height="38.5" rx="9" fill="#1e1e2e" stroke="#94e2d5" stroke-opacity="0.45" stroke-width="1.2"/>
+  <text x="25.0" y="25" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="14" font-weight="700" fill="#94e2d5">AC</text>
+</svg>

@@ -2,18 +2,10 @@
 
 <img src="assets/img/banner.svg" alt="{{ profile.name }}" width="100%" />
 
-<sub>
-<a href="{{ profile.links.github }}">GitHub</a> ·
-<a href="{{ profile.links.linkedin }}">LinkedIn</a> ·
-<a href="{{ profile.links.codeforces }}">Codeforces</a> ·
-<a href="{{ profile.links.atcoder }}">AtCoder</a> ·
-<a href="{{ profile.links.picoctf }}">picoCTF</a> ·
-{% if profile.links.wca %}<a href="https://www.worldcubeassociation.org/persons/{{ profile.links.wca }}">WCA</a> ·{% endif %}
-<a href="{{ profile.links.instagram }}">Instagram</a> ·
-{% if profile.links.toph %}<a href="{{ profile.links.toph }}">Toph</a> ·{% endif %}
-<a href="mailto:{{ profile.links.email }}">Email</a>
-</sub>
+<br/><br/>
 
+{% for key, url in chip_links %}<a href="{{ url }}"><img src="assets/img/chips/{{ key }}.svg" height="40" alt="{{ key }}"/></a>
+{% endfor %}
 </div>
 
 <br/>
@@ -22,15 +14,16 @@
 
 <br/>
 
-<img src="assets/img/gh_stats.svg" width="100%" alt="GitHub stats" />
+### Track record
 
-<br/><br/>
+<table>
+<tr>
+<td width="50%"><img src="assets/img/onsite_chart.svg" width="100%" alt="Onsite contest rank trend" /></td>
+<td width="50%"><img src="assets/img/atcoder_chart.svg" width="100%" alt="AtCoder rating history" /></td>
+</tr>
+</table>
 
-### Onsite track record
-
-<img src="assets/img/onsite_chart.svg" width="100%" alt="Onsite contest rank trend" />
-
-<sub>Rendered from <code>data/onsite_contests.csv</code> — this is a live log, not a highlight reel.</sub>
+<sub>Both rendered straight from data — <code>data/onsite_contests.csv</code> and a live AtCoder fetch. Neither is a curated highlight reel.</sub>
 
 <br/><br/>
 
@@ -41,8 +34,12 @@
 <br/>
 
 <div align="center">
-<img src="https://skillicons.dev/icons?i={{ beyond.tech_stack | join(',') }}&theme=dark" alt="Toolbox" />
+<img src="assets/img/tech_stack.svg" alt="Toolbox" />
 </div>
+
+<br/>
+
+**Off the clock** — {{ beyond.calisthenics | join(', ') | lower }}, {{ beyond.combat_sports | join(' & ') }}, a {{ beyond.speedcubing_pb }} cube solve, {{ beyond.art | join(' and ') | lower }}, and slowly getting fluent in {{ beyond.languages_learning[0] }}.
 
 <br/>
 
