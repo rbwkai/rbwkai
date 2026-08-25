@@ -60,9 +60,9 @@ NAME_GRAD_TO = MOCHA_LAVENDER
 FONT_STACK = "'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace"
 
 # ---- game of life tuning: ONE glider, larger board, no tiling ----
-LIFE_GRID = 64          # NxN toroidal cells (~2.5x larger than original)
-LIFE_CELL = 6           # px per cell (board is LIFE_GRID * LIFE_CELL px square)
-LIFE_FRAME_TIME = 0.08  # seconds per generation (slightly faster for a large grid)
+LIFE_GRID = 32          # NxN toroidal cells 
+LIFE_CELL = 25           # px per cell (board is LIFE_GRID * LIFE_CELL px square)
+LIFE_FRAME_TIME = 0.10  # seconds per generation (slightly faster for a large grid)
 LIFE_CENTER = (960, 128)   # px, shifted slightly to balance the larger grid
 LIFE_FADE_RADIUS = 160     # larger radial mask fade radius, in px
 
