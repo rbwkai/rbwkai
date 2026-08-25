@@ -60,16 +60,25 @@ NAME_GRAD_TO = MOCHA_LAVENDER
 FONT_STACK = "'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace"
 
 # ---- game of life tuning: ONE glider, larger board, no tiling ----
-LIFE_GRID = 32          # NxN toroidal cells 
-LIFE_CELL = 25           # px per cell (board is LIFE_GRID * LIFE_CELL px square)
-LIFE_FRAME_TIME = 0.10  # seconds per generation (slightly faster for a large grid)
+LIFE_GRID = 18          # Reduced so the board fits cleanly over the mask (18 * 25 = 450px)
+LIFE_CELL = 21          # px per cell (Glider is now HUGE)
+LIFE_FRAME_TIME = 0.16  # seconds per generation
 LIFE_CENTER = (960, 128)   # px, shifted slightly to balance the larger grid
-LIFE_FADE_RADIUS = 160     # larger radial mask fade radius, in px
+LIFE_FADE_RADIUS = 256     # larger radial mask fade radius, in px
 
 # Glider oriented to travel NE (up and to the right). 
-# Bounding-box row decreases and column increases.
-GLIDER = [(2, 1), (1, 2), (0, 0), (0, 1), (0, 2)]
+# We add an offset so it spawns near the center of the grid (inside the mask)
+# rather than at the invisible top-left corner.
+offset_y = LIFE_GRID // 2
+offset_x = LIFE_GRID // 2 - 4
 
+GLIDER = [
+    (2 + offset_y, 1 + offset_x), 
+    (1 + offset_y, 2 + offset_x), 
+    (0 + offset_y, 0 + offset_x), 
+    (0 + offset_y, 1 + offset_x), 
+    (0 + offset_y, 2 + offset_x)
+]
 
 def life_step(grid, n):
     """One generation of Conway's Game of Life on an n x n torus."""
