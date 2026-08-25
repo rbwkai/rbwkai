@@ -48,7 +48,7 @@ Competitive programmer chasing Candidate Master on Codeforces, currently teachin
 
 <br/>
 
-**Off the clock** — full planche, front lever, one-arm pull-up progression, 90 degree push-ups, MMA & Taekwondo, a 14.41s cube solve, sketching and origami, and slowly getting fluent in Arabic (Modern Standard).
+**Off the clock** — full planche, front lever, one-arm pull-up, 90 degree push-ups, MMA & Taekwondo, a 14.41s cube solve, sketching and origami, and slowly getting fluent in Arabic (Modern Standard).
 
 <br/>
 
