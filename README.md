@@ -13,14 +13,14 @@
 <a href="https://instagram.com/rbwkai"><img src="assets/img/chips/instagram.svg" height="30" alt="instagram"/></a>
 <a href="https://toph.co/u/rbwkai"><img src="assets/img/chips/toph.svg" height="30" alt="toph"/></a>
 <a href="mailto:mahiulkabir@iut-dhaka.edu"><img src="assets/img/chips/email.svg" height="30" alt="email"/></a>
+
+
+<br/>
+
+***Not your average nerd, tho..***
+
+<br/>
 </div>
-
-<br/>
-
-Not your average Nerd, tho..
-
-
-<br/>
 
 ### Track record
 
