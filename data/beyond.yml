@@ -1,0 +1,6 @@
+calisthenics: ["Full planche", "Front lever", "One-arm pull-up progression", "90 degree push-ups"]
+combat_sports: ["MMA", "Taekwondo"]
+speedcubing_pb: "14.41s"
+art: ["Sketching", "Origami"]
+languages_learning: ["Arabic (Modern Standard)"]
+tech_stack: [cpp, python, java, rust, linux, git, react, spring]   # skillicons.dev slugs

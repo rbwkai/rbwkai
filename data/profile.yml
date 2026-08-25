@@ -1,0 +1,27 @@
+name: "Md. Mahiul Kabir"
+handle: rbwkai
+prompt: "ponderer@universe"
+identities:            # cycles in the banner's type/backspace animation, in order
+  - text: "Competitive Programmer"
+    color: "#cba6f7"    # mauve
+  - text: "Athlete"
+    color: "#94e2d5"    # teal
+  - text: "Artist"
+    color: "#b4befe"    # lavender
+
+bio: >
+  Competitive programmer chasing Candidate Master on Codeforces, currently teaching
+  IUT's next onsite batch the same DP and graph theory that got me here. Between
+  contests I'm usually deep in a Raspberry Pi Pico project, holding a plank for a
+  planche, or trying to read Arabic faster than I debug a segfault.
+
+links:
+  github: "https://github.com/rbwkai"
+  linkedin: "https://linkedin.com/in/mahiulkabir"
+  codeforces: "https://codeforces.com/profile/rbwkai"
+  atcoder: "https://atcoder.jp/users/rbwkai"          # TODO: confirm handle
+  picoctf: "https://picoctf.org/users/rbwkai"          # TODO: confirm handle
+  wca: null                                             # TODO: paste real WCA ID (format like 2023KABI01)
+  instagram: "https://instagram.com/rbwkai"             # TODO: confirm handle
+  toph: null                                            # TODO: add if wanted, e.g. https://toph.co/u/rbwkai
+  email: "mahiulkabir@iut-dhaka.edu"

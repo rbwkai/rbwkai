@@ -8,7 +8,6 @@
 <a href="https://codeforces.com/profile/rbwkai">Codeforces</a> ·
 <a href="https://atcoder.jp/users/rbwkai">AtCoder</a> ·
 <a href="https://picoctf.org/users/rbwkai">picoCTF</a> ·
-<a href="#">WCA</a> ·
 <a href="https://instagram.com/rbwkai">Instagram</a> ·
 <a href="mailto:mahiulkabir@iut-dhaka.edu">Email</a>
 </sub>
@@ -17,22 +16,14 @@
 
 <br/>
 
-Competitive Programmer, Calisthenics and Combat Athlete, Artist.
+Competitive programmer chasing Candidate Master on Codeforces, currently teaching IUT's next onsite batch the same DP and graph theory that got me here. Between contests I'm usually deep in a Raspberry Pi Pico project, holding a plank for a planche, or trying to read Arabic faster than I debug a segfault.
+
 
 <br/>
 
-<table>
-<tr>
-<td width="50%">
-<img src="https://github-readme-stats.vercel.app/api?username=rbwkai&show_icons=true&theme=catppuccin_mocha&hide_border=true&count_private=true" width="100%" alt="GitHub stats"/>
-</td>
-<td width="50%">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rbwkai&theme=catppuccin_mocha&hide_border=true&layout=compact" width="100%" alt="Top languages"/>
-</td>
-</tr>
-</table>
+<img src="assets/img/gh_stats.svg" width="100%" alt="GitHub stats" />
 
-<br/>
+<br/><br/>
 
 ### Onsite track record
 
@@ -43,11 +34,11 @@ Competitive Programmer, Calisthenics and Combat Athlete, Artist.
 <br/><br/>
 
 **Highlights**
-- Codeforces Expert, peak rating **1692** · 230+ problems solved on CSES
-- 12+ inter-university onsite contests for IUT · personal-best **rank 19 of 150 teams** (AUST IUPC, 2025)
+- Codeforces Expert, peak rating 1692, 230+ problems solved on CSES
+- 12+ inter-university onsite contests for IUT, personal-best rank 19 of 150 teams (AUST IUPC, 2025)
 - Instructor, IUTPC — DP, graph theory, and data structures for 50+ freshers a year
 - Software sub-team, Project Altair (IUT Mars Rover) — ROS-based automation pipeline
-- 3× national qualifier, Bangladesh Math Olympiad · Divisional Champion, 2018
+- 3x national qualifier, Bangladesh Math Olympiad, Divisional Champion 2018
 
 <br/>
 

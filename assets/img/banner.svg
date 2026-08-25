@@ -7,27 +7,32 @@
   <circle cx="78" cy="30" r="6" fill="#a6e3a1"/>
   <line x1="20" y1="50" x2="1180" y2="50" stroke="#a6adc8" stroke-width="1" opacity="0.15"/>
 
-  <text x="40" y="100" font-family="'Fira Code', Consolas, monospace" font-size="15" fill="#a6e3a1" opacity="0.85">visitor@rbwkai:~$ whoami</text>
-  <text x="40" y="155" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#cdd6f4">Md. Mahiul Kabir</text>
+  <text x="40" y="95" font-family="'Fira Code', Consolas, monospace" font-size="18" fill="#89b4fa" opacity="0.85">ponderer@universe:~$ whoami</text>
+  <text x="40" y="145" font-family="'Fira Code', Consolas, monospace" font-size="30" font-weight="700" fill="#cdd6f4">Md. Mahiul Kabir</text>
 
   <defs>
-    <clipPath id="clipW1"><rect x="40" y="172" width="0" height="30"><animate id="w1type" attributeName="width" from="0" to="290" dur="1.3s" begin="0.4s;w3del.end+0.4s" fill="freeze"/><animate id="w1del" attributeName="width" from="290" to="0" dur="0.7s" begin="w1type.end+1.0s" fill="freeze"/></rect></clipPath>
-    <clipPath id="clipW2"><rect x="40" y="172" width="0" height="30"><animate id="w2type" attributeName="width" from="0" to="92" dur="0.9s" begin="w1del.end+0.4s" fill="freeze"/><animate id="w2del" attributeName="width" from="92" to="0" dur="0.6s" begin="w2type.end+1.0s" fill="freeze"/></rect></clipPath>
-    <clipPath id="clipW3"><rect x="40" y="172" width="0" height="30"><animate id="w3type" attributeName="width" from="0" to="79" dur="0.8s" begin="w2del.end+0.4s" fill="freeze"/><animate id="w3del" attributeName="width" from="79" to="0" dur="0.6s" begin="w3type.end+1.0s" fill="freeze"/></rect></clipPath>
+    <clipPath id="clip0"><rect x="40" y="172" width="0" height="30">
+      <animate id="w0type" attributeName="width" from="0" to="290" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
+      <animate id="w0del" attributeName="width" from="290" to="0" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
+    </rect></clipPath><clipPath id="clip1"><rect x="40" y="172" width="0" height="30">
+      <animate id="w1type" attributeName="width" from="0" to="92" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
+      <animate id="w1del" attributeName="width" from="92" to="0" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
+    </rect></clipPath><clipPath id="clip2"><rect x="40" y="172" width="0" height="30">
+      <animate id="w2type" attributeName="width" from="0" to="79" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
+      <animate id="w2del" attributeName="width" from="79" to="0" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
+    </rect></clipPath>
   </defs>
 
-  <text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#cba6f7" clip-path="url(#clipW1)">Competitive Programmer</text>
-  <text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#94e2d5" clip-path="url(#clipW2)">Athlete</text>
-  <text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#fab387" clip-path="url(#clipW3)">Artist</text>
+  <text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#cba6f7" clip-path="url(#clip0)">Competitive Programmer</text><text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#94e2d5" clip-path="url(#clip1)">Athlete</text><text x="40" y="196" font-family="'Fira Code', Consolas, monospace" font-size="22" fill="#b4befe" clip-path="url(#clip2)">Artist</text>
 
   <rect x="40" y="176" width="3" height="24" fill="#cdd6f4">
     <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite"/>
-    <animate attributeName="x" from="40" to="330" dur="1.3s" begin="0.4s;w3del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="330" to="40" dur="0.7s" begin="w1type.end+1.0s" fill="freeze"/>
-    <animate attributeName="x" from="40" to="132" dur="0.9s" begin="w1del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="132" to="40" dur="0.6s" begin="w2type.end+1.0s" fill="freeze"/>
-    <animate attributeName="x" from="40" to="119" dur="0.8s" begin="w2del.end+0.4s" fill="freeze"/>
-    <animate attributeName="x" from="119" to="40" dur="0.6s" begin="w3type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="330" dur="1.32s" begin="0.4s;w2del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="330" to="40" dur="0.99s" begin="w0type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="132" dur="0.42s" begin="w0del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="132" to="40" dur="0.32s" begin="w1type.end+1.0s" fill="freeze"/>
+    <animate attributeName="x" from="40" to="119" dur="0.36s" begin="w1del.end+0.4s" fill="freeze"/>
+    <animate attributeName="x" from="119" to="40" dur="0.27s" begin="w2type.end+1.0s" fill="freeze"/>
   </rect>
 
   <text x="1160" y="235" text-anchor="end" font-family="'Fira Code', Consolas, monospace" font-size="12" fill="#a6adc8" opacity="0.45">~/rbwkai</text>

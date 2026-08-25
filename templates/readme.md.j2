@@ -1,0 +1,51 @@
+<div align="center">
+
+<img src="assets/img/banner.svg" alt="{{ profile.name }}" width="100%" />
+
+<sub>
+<a href="{{ profile.links.github }}">GitHub</a> ·
+<a href="{{ profile.links.linkedin }}">LinkedIn</a> ·
+<a href="{{ profile.links.codeforces }}">Codeforces</a> ·
+<a href="{{ profile.links.atcoder }}">AtCoder</a> ·
+<a href="{{ profile.links.picoctf }}">picoCTF</a> ·
+{% if profile.links.wca %}<a href="https://www.worldcubeassociation.org/persons/{{ profile.links.wca }}">WCA</a> ·{% endif %}
+<a href="{{ profile.links.instagram }}">Instagram</a> ·
+{% if profile.links.toph %}<a href="{{ profile.links.toph }}">Toph</a> ·{% endif %}
+<a href="mailto:{{ profile.links.email }}">Email</a>
+</sub>
+
+</div>
+
+<br/>
+
+{{ profile.bio }}
+
+<br/>
+
+<img src="assets/img/gh_stats.svg" width="100%" alt="GitHub stats" />
+
+<br/><br/>
+
+### Onsite track record
+
+<img src="assets/img/onsite_chart.svg" width="100%" alt="Onsite contest rank trend" />
+
+<sub>Rendered from <code>data/onsite_contests.csv</code> — this is a live log, not a highlight reel.</sub>
+
+<br/><br/>
+
+**Highlights**
+{% for h in achievements.highlights %}- {{ h }}
+{% endfor %}
+
+<br/>
+
+<div align="center">
+<img src="https://skillicons.dev/icons?i={{ beyond.tech_stack | join(',') }}&theme=dark" alt="Toolbox" />
+</div>
+
+<br/>
+
+<div align="center">
+<sub>Generated from <code>data/</code> · last updated {{ build_date }}</sub>
+</div>
