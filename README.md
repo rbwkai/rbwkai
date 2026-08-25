@@ -4,13 +4,13 @@
 
 <br/><br/>
 
-<a href="https://github.com/rbwkai"><img src="assets/img/chips/github.svg" height="40" alt="github"/></a>
-<a href="https://linkedin.com/in/mahiulkabir"><img src="assets/img/chips/linkedin.svg" height="40" alt="linkedin"/></a>
-<a href="https://codeforces.com/profile/rbwkai"><img src="assets/img/chips/codeforces.svg" height="40" alt="codeforces"/></a>
-<a href="https://atcoder.jp/users/rbwkai"><img src="assets/img/chips/atcoder.svg" height="40" alt="atcoder"/></a>
-<a href="https://picoctf.org/users/rbwkai"><img src="assets/img/chips/picoctf.svg" height="40" alt="picoctf"/></a>
-<a href="https://instagram.com/rbwkai"><img src="assets/img/chips/instagram.svg" height="40" alt="instagram"/></a>
-<a href="mailto:mahiulkabir@iut-dhaka.edu"><img src="assets/img/chips/email.svg" height="40" alt="email"/></a>
+<a href="resume/resume.pdf"><img src="assets/img/chips/resume.svg" height="30" alt="resume"/></a>
+<a href="https://linkedin.com/in/mahiulkabir"><img src="assets/img/chips/linkedin.svg" height="30" alt="linkedin"/></a>
+<a href="https://codeforces.com/profile/rbwkai"><img src="assets/img/chips/codeforces.svg" height="30" alt="codeforces"/></a>
+<a href="https://atcoder.jp/users/rbwkai"><img src="assets/img/chips/atcoder.svg" height="30" alt="atcoder"/></a>
+<a href="https://learn.cylabacademy.org/users/rbwkai"><img src="assets/img/chips/cylab.svg" height="30" alt="cylab"/></a>
+<a href="https://instagram.com/rbwkai"><img src="assets/img/chips/instagram.svg" height="30" alt="instagram"/></a>
+<a href="mailto:mahiulkabir@iut-dhaka.edu"><img src="assets/img/chips/email.svg" height="30" alt="email"/></a>
 </div>
 
 <br/>

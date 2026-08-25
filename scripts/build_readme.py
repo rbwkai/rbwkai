@@ -19,7 +19,7 @@ def load_yaml(name):
     return yaml.safe_load((DATA / name).read_text())
 
 
-CHIP_ORDER = ["github", "linkedin", "codeforces", "atcoder", "picoctf", "wca", "instagram", "toph", "email"]
+CHIP_ORDER = ["resume", "linkedin", "codeforces", "atcoder", "cylab", "wca", "instagram", "toph", "email"]
 
 
 def build_chip_links(profile):

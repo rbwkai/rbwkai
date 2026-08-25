@@ -16,11 +16,12 @@ bio: >
   planche, or trying to read Arabic faster than I debug a segfault.
 
 links:
-  github: "https://github.com/rbwkai"
+  # no github entry — the README already lives on GitHub, a self-link is redundant
+  resume: "resume/resume.pdf"                           # rendered locally from resume/resume.tex, then committed here
   linkedin: "https://linkedin.com/in/mahiulkabir"
   codeforces: "https://codeforces.com/profile/rbwkai"
   atcoder: "https://atcoder.jp/users/rbwkai"          # TODO: confirm handle
-  picoctf: "https://picoctf.org/users/rbwkai"          # TODO: confirm handle
+  cylab: "https://learn.cylabacademy.org/users/rbwkai"  # formerly picoCTF, renamed to CyLab Academy
   wca: null                                             # TODO: paste real WCA ID (format like 2023KABI01)
   instagram: "https://instagram.com/rbwkai"             # TODO: confirm handle
   toph: null                                            # TODO: add if wanted, e.g. https://toph.co/u/rbwkai

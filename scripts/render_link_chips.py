@@ -1,7 +1,7 @@
 """
 Renders one small SVG "chip" per link in profile.yml into assets/img/chips/.
-Uses plain monogram labels instead of brand logos — sidesteps the problem of
-inconsistent/missing brand icons across services like WCA, Toph, picoCTF, and
+Uses plain text-label chips instead of brand logos — sidesteps the problem of
+inconsistent/missing brand icons across services like WCA, Toph, CyLab, and
 keeps everything visually uniform with the rest of the self-hosted assets.
 """
 from pathlib import Path
@@ -13,25 +13,31 @@ OUT_DIR = ROOT / "assets" / "img" / "chips"
 
 BG = "#1e1e2e"
 
-# key -> (monogram label, accent color, condition on profile.links)
+# key -> (full label, accent color) — no github chip: the README already lives on GitHub
 CHIPS = [
-    ("github",     "GH",   "#b4befe"),
-    ("linkedin",   "LI",   "#89b4fa"),
-    ("codeforces", "CF",   "#cba6f7"),
-    ("atcoder",    "AC",   "#94e2d5"),
-    ("picoctf",    "PC",   "#a6e3a1"),
-    ("wca",        "WCA",  "#f5c2e7"),
-    ("instagram",  "IG",   "#f38ba8"),
-    ("toph",       "TOPH", "#74c7ec"),
-    ("email",      "MAIL", "#f9e2af"),
+    ("resume",     "Resume",       "#f9e2af"),
+    ("linkedin",   "LinkedIn",     "#89b4fa"),
+    ("codeforces", "Codeforces",   "#cba6f7"),
+    ("atcoder",    "AtCoder",      "#94e2d5"),
+    ("cylab",      "CyLab Academy","#a6e3a1"),
+    ("wca",        "WCA",          "#f5c2e7"),
+    ("instagram",  "Instagram",    "#f38ba8"),
+    ("toph",       "Toph",         "#74c7ec"),
+    ("email",      "Email",        "#f9e2af"),
 ]
+
+# chip geometry — smaller font, wider & shorter card than the old 40px-tall version
+HEIGHT = 28
+FONT_SIZE = 11
+CHAR_W = 6.7   # approx px per char at font-size 11 in Fira Code
+PAD_X = 14
 
 
 def chip_svg(label, color):
-    width = 26 + len(label) * 12
-    return f'''<svg width="{width}" height="40" viewBox="0 0 {width} 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{label}">
-  <rect x="0.75" y="0.75" width="{width - 1.5}" height="38.5" rx="9" fill="{BG}" stroke="{color}" stroke-opacity="0.45" stroke-width="1.2"/>
-  <text x="{width / 2}" y="25" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="14" font-weight="700" fill="{color}">{label}</text>
+    width = round(PAD_X * 2 + len(label) * CHAR_W)
+    return f'''<svg width="{width}" height="{HEIGHT}" viewBox="0 0 {width} {HEIGHT}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{label}">
+  <rect x="0.75" y="0.75" width="{width - 1.5}" height="{HEIGHT - 1.5}" rx="7" fill="{BG}" stroke="{color}" stroke-opacity="0.45" stroke-width="1.1"/>
+  <text x="{width / 2}" y="{HEIGHT / 2 + 3.8}" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="{FONT_SIZE}" font-weight="600" fill="{color}">{label}</text>
 </svg>
 '''
 
