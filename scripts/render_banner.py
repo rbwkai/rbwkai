@@ -2,15 +2,12 @@
 Generates assets/img/banner.svg from data/profile.yml.
 Run via `make banner` or as part of `make update`.
 
-v4 — glassmorphism terminal with a single living accent: one Game of Life
-glider (verified NE-bound), evolved on a small toroidal grid with
-straightforward Life rules and cycle-detected (not assumed) until it
-returns to its exact starting state. That verified sequence drives ONE
-<path> via a discrete SMIL <animate> on `d` — no tiling, no repetition.
-It's masked with a radial opacity fade (transparency only, no blur
-filters anywhere in this file) so it lives as a single quiet "sigil" to
-the right of the terminal text. No JS, so it still animates fine as a
-plain <img> in a README.
+v5 — minimal modern semi-transparent terminal with a single living accent:
+one Game of Life glider (verified NE-bound), evolved on a larger toroidal grid
+with straightforward Life rules and cycle-detected until it returns to its 
+exact starting state. That verified sequence drives ONE <path> via a discrete 
+SMIL <animate> on `d` — no tiling, no repetition. Masked with a clean radial
+opacity fade (no blurs or glassmorphism).
 
 Palette is strictly Catppuccin Mocha — every color below is one of the
 named Mocha values, no invented in-between shades.
@@ -48,12 +45,10 @@ BG_GRAD_TOP = MOCHA_CRUST
 BG_GRAD_MID = MOCHA_MANTLE
 BG_GRAD_BOT = MOCHA_BASE
 PANEL_FILL = MOCHA_BASE
-PANEL_OPACITY = 0.46
+PANEL_OPACITY = 0.35      # Lowered slightly for a cleaner flat transparent look
 PANEL_STROKE = MOCHA_SURFACE1
-PANEL_HIGHLIGHT = MOCHA_TEXT
 LIFE_COLOR = MOCHA_LAVENDER
-LIFE_OPACITY = 0.6
-GLOW_COLOR = MOCHA_PINK
+LIFE_OPACITY = 0.45       # Softened to maintain a minimal aesthetic
 PROMPT_COLOR = MOCHA_TEAL
 CURSOR_COLOR = MOCHA_PINK
 FOOTER_COLOR = MOCHA_OVERLAY1
@@ -61,32 +56,19 @@ DOT_COLORS = (MOCHA_RED, MOCHA_YELLOW, MOCHA_GREEN)
 NAME_GRAD_FROM = MOCHA_TEXT
 NAME_GRAD_TO = MOCHA_LAVENDER
 
-# JetBrains Mono via Google Fonts. Note: this is the plain typeface only —
-# Nerd Font icon glyphs are a separate patched build not hosted on Google's
-# CDN, so icon glyphs in identity text won't render with this @import.
-# Self-host a Nerd Font build if you need the icon set.
+# JetBrains Mono via Google Fonts.
 FONT_STACK = "'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace"
 
-# ---- game of life tuning: ONE glider, one small board, no tiling ----
-LIFE_GRID = 26          # NxN toroidal cells
-LIFE_CELL = 7           # px per cell (board is LIFE_GRID * LIFE_CELL px square)
-LIFE_FRAME_TIME = 0.09  # seconds per generation
-LIFE_CENTER = (985, 128)   # px, where the motif sits within the 1200x260 banner
-LIFE_FADE_RADIUS = 96      # radial mask fade radius, in px
+# ---- game of life tuning: ONE glider, larger board, no tiling ----
+LIFE_GRID = 64          # NxN toroidal cells (~2.5x larger than original)
+LIFE_CELL = 6           # px per cell (board is LIFE_GRID * LIFE_CELL px square)
+LIFE_FRAME_TIME = 0.08  # seconds per generation (slightly faster for a large grid)
+LIFE_CENTER = (960, 128)   # px, shifted slightly to balance the larger grid
+LIFE_FADE_RADIUS = 160     # larger radial mask fade radius, in px
 
-# Glider oriented to travel NE (up and to the right). Verified by simulating
-# on an open (non-wrapping) grid: bounding-box row decreases and column
-# increases every 4 generations — see dev notes / commit for the check.
-# ###
-# ..#
-# .#.
+# Glider oriented to travel NE (up and to the right). 
+# Bounding-box row decreases and column increases.
 GLIDER = [(2, 1), (1, 2), (0, 0), (0, 1), (0, 2)]
-
-# Canonical glider (moving south-east), as (row, col) offsets:
-# .#.
-# ..#
-# ###
-GLIDER = [(0, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 
 
 def life_step(grid, n):
@@ -107,9 +89,7 @@ def life_step(grid, n):
 
 def compute_life_frames(n, pattern):
     """Evolve `pattern` on an n x n torus until it returns to its exact
-    starting state. A lone glider on a torus is exactly periodic (no
-    transient), so cycle detection gives the true, provable loop length
-    instead of a guessed constant."""
+    starting state. Cycle detection gives the true, provable loop length."""
     grid = [[0] * n for _ in range(n)]
     for r, c in pattern:
         grid[r % n][c % n] = 1
@@ -132,14 +112,8 @@ def frame_path_d(cells, cell_px):
 
 
 def build_life_motif():
-    """A single glider, masked into a soft-edged glowing sigil rather than
-    tiled across the card. The mask fades the motif to nothing before its
-    toroidal wrap edge, so instead of a hard cut the glider quietly
-    dissolves and re-materializes each cycle — no visible seam.
-
-    Returns (defs_fragment, render_fragment): the former holds gradients
-    and the mask definition (belongs in <defs>), the latter is the actual
-    glow + animated glider group (belongs in the render tree)."""
+    """A single glider, masked into a soft-edged sigil (no blur/glow).
+    The mask fades the motif to nothing before its toroidal wrap edge."""
     frames = compute_life_frames(LIFE_GRID, GLIDER)
     board_px = LIFE_GRID * LIFE_CELL
     d_values = ";".join(frame_path_d(f, LIFE_CELL) for f in frames)
@@ -147,21 +121,16 @@ def build_life_motif():
     cx, cy = LIFE_CENTER
     x0, y0 = cx - board_px / 2, cy - board_px / 2
 
-    defs_fragment = f'''<radialGradient id="lifeGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="{GLOW_COLOR}" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="{GLOW_COLOR}" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="lifeFade" cx="50%" cy="50%" r="50%">
+    defs_fragment = f'''<radialGradient id="lifeFade" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
-      <stop offset="70%" stop-color="#fff" stop-opacity="0.7"/>
+      <stop offset="65%" stop-color="#fff" stop-opacity="0.85"/>
       <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </radialGradient>
     <mask id="lifeMask">
       <circle cx="{cx}" cy="{cy}" r="{LIFE_FADE_RADIUS}" fill="url(#lifeFade)"/>
     </mask>'''
 
-    render_fragment = f'''<circle cx="{cx}" cy="{cy}" r="{LIFE_FADE_RADIUS * 1.5}" fill="url(#lifeGlow)"/>
-  <g mask="url(#lifeMask)" filter="url(#softGlow)">
+    render_fragment = f'''<g mask="url(#lifeMask)">
     <path transform="translate({x0},{y0})" d="{frame_path_d(frames[0], LIFE_CELL)}" fill="{LIFE_COLOR}" fill-opacity="{LIFE_OPACITY}">
       <animate attributeName="d" calcMode="discrete" dur="{dur}s" repeatCount="indefinite" values="{d_values}"/>
     </path>
@@ -221,19 +190,6 @@ def build_svg(profile: dict) -> str:
       <stop offset="100%" stop-color="{NAME_GRAD_TO}"/>
     </linearGradient>
 
-    <linearGradient id="panelTopEdge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="{PANEL_HIGHLIGHT}" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="{PANEL_HIGHLIGHT}" stop-opacity="0"/>
-    </linearGradient>
-
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="1.6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
     {life_defs}
 
     {"".join(clip_defs)}
@@ -241,13 +197,13 @@ def build_svg(profile: dict) -> str:
 
   <rect x="0" y="0" width="1200" height="260" rx="18" fill="url(#bgGrad)"/>
   {life_render}
-  <rect x="1" y="1" width="1198" height="258" rx="17" fill="{PANEL_FILL}" fill-opacity="{PANEL_OPACITY}" stroke="{PANEL_STROKE}" stroke-opacity="0.55" stroke-width="1"/>
-  <rect x="1" y="1" width="1198" height="60" rx="17" fill="url(#panelTopEdge)"/>
+  
+  <rect x="1" y="1" width="1198" height="258" rx="17" fill="{PANEL_FILL}" fill-opacity="{PANEL_OPACITY}" stroke="{PANEL_STROKE}" stroke-opacity="0.4" stroke-width="1"/>
 
   <circle cx="34" cy="30" r="5.5" fill="{dot_red}"/>
   <circle cx="56" cy="30" r="5.5" fill="{dot_yellow}"/>
   <circle cx="78" cy="30" r="5.5" fill="{dot_green}"/>
-  <line x1="20" y1="50" x2="1180" y2="50" stroke="#cdd6f4" stroke-width="1" opacity="0.08"/>
+  <line x1="20" y1="50" x2="1180" y2="50" stroke="{MOCHA_TEXT}" stroke-width="1" opacity="0.06"/>
 
   <text x="40" y="95" font-family="{FONT_STACK}" font-size="18" fill="{PROMPT_COLOR}" opacity="0.9">{prompt}:~$ whoami</text>
   <text x="40" y="145" font-family="{FONT_STACK}" font-size="30" font-weight="700" fill="url(#nameGrad)">{name}</text>
