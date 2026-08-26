@@ -8,7 +8,8 @@
 % ============================================================================
 \documentclass[10.5pt,letterpaper]{article}
 
-\usepackage[margin=0.55in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage[left=0.55in,right=0.55in,top=0.34in,bottom=0.34in]{geometry}
+\renewcommand{\baselinestretch}{0.96}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -22,27 +23,30 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
-% ---- section headings -------------------------------------------------
+% ---- section headings ---------------------------------------------------
+% Fixed: the rule now gets explicit positive clearance below the text
+% baseline instead of a negative \vspace, so it no longer collides with
+% descenders/cap-height on the heading above it.
 \titleformat{\section}
-  {\large\bfseries\scshape}
+  {\normalfont\large\bfseries\scshape\color{accent}}
   {}{0em}{}
-  [\vspace{-6pt}\titlerule\vspace{2pt}]
-\titlespacing*{\section}{0pt}{7pt}{3pt}
+  [\vspace{2pt}{\color{accent}\titlerule[0.9pt]}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 
-% ---- tight lists -------------------------------------------------------
-\setlist[itemize]{leftmargin=14pt, itemsep=0pt, topsep=1pt, parsep=0pt}
+% ---- tight lists ---------------------------------------------------------
+\setlist[itemize]{leftmargin=14pt, itemsep=0.5pt, topsep=0.8pt, parsep=0pt}
 
-% ---- helper: entry with title/date row, subtitle/location row --------
+% ---- helper: entry with title/date row, subtitle/location row -----------
 \newcommand{\entry}[4]{%
   \textbf{#1} \hfill \textit{#2}\\
-  \textit{#3} \hfill #4\\[0pt]
+  \textit{\color{subtext}#3} \hfill #4\\[1pt]
 }
 
 \newcommand{\link}[2]{\href{#1}{\textcolor{accent}{#2}}}
 
 \begin{document}
 
-% ============================ HEADER ====================================
+% ============================ HEADER ======================================
 \begin{center}
   {\LARGE \bfseries Md.\ Mahiul Kabir}\\[2pt]
   \small
@@ -50,10 +54,12 @@
   \link{mailto:mahiulkabir@iut-dhaka.edu}{mahiulkabir@iut-dhaka.edu}\\
   \link{https://github.com/rbwkai}{github.com/rbwkai} \;\textbar\;
   \link{https://linkedin.com/in/mahiulkabir}{linkedin.com/in/mahiulkabir} \;\textbar\;
-  \link{https://codeforces.com/profile/rbwkai}{codeforces.com/rbwkai}
+  \link{https://codeforces.com/profile/rbwkai}{codeforces.com/rbwkai}\\[3pt]
+  {\small\itshape\color{subtext}
+  Competitive programmer (Codeforces Expert) building rigorous C++ systems, full-stack apps, and embedded tools.}
 \end{center}
 
-% ============================ EDUCATION ==================================
+% ============================ EDUCATION ====================================
 \section{Education}
 
 \entry{Islamic University of Technology (IUT)}{Expected 2027}
@@ -62,62 +68,65 @@
 \entry{St.\ Joseph Higher Secondary School}{2022}
 {Higher Secondary Certificate (HSC) --- GPA: 5.00/5.00}{Dhaka, Bangladesh}
 
-% ================= COMPETITIVE PROGRAMMING & ACHIEVEMENTS ================
+% ================= COMPETITIVE PROGRAMMING & ACHIEVEMENTS ==================
 \section{Competitive Programming \& Achievements}
 \begin{itemize}
-  \item \textbf{Codeforces Expert} (peak rating 1692, handle: \texttt{rbwkai}) --- 1500+ problems solved across Codeforces, CSES, and other platforms (230+ on CSES alone)
-  \item Represented IUT at \textbf{9 onsite Inter-University Programming Contests} (IUPC) against fields of 120--150 teams --- best ranks: 17 (DUET 2026), 18 (NSU 2026), 19 (SUST 2026), 19 (AUST 2025)
+  \item Competed onsite in \textbf{14 collegiate contests} --- 2 ICPC Asia Regionals, NCPC, and \textbf{11 IUPCs} --- best ranks \textbf{17th} (DUET 2026), \textbf{18th} (NSU 2026), \textbf{19th} (SUST 2026, AUST 2025)
   \item \textbf{Divisional Champion} (2018) and \textbf{3$\times$ National Qualifier} (2017, 2018, 2020), Bangladesh Mathematical Olympiad (BDMO)
+  \item \textbf{Codeforces Expert} (peak rating 1692, handle \texttt{rbwkai}) --- 1,500+ problems solved across Codeforces, CSES, and other judges (230+ on CSES alone)
 \end{itemize}
 
-% ============================ EXPERIENCE =================================
+% ============================ EXPERIENCE ===================================
 \section{Experience}
 
 \entry{IUTPC (IUT Programming Club) --- Instructor}{Since Jun 2024}
 {Official competitive programming club of IUT CSE}{Dhaka, Bangladesh}
 \begin{itemize}
-  \item Taught competitive programming fundamentals (DP, graph theory, data structures) to 50+ freshers across two batches
-  \item Designed problem sets and mentored students, several of whom went on to compete in national-level onsite contests
-  \item Problemsetter, IUT Intra Junior Programming Contest (2025, 2026); Judge, IUT Intra Programming Contest (2025)
+  \item Instruct 50+ freshers across two batches in competitive programming fundamentals (dynamic programming, graph theory, data structures); several students have advanced to national-level onsite contests
+  \item Author problem sets as Problemsetter for the IUT Intra Junior Programming Contest (2025, 2026) and serve as Judge for the IUT Intra Programming Contest (2025)
 \end{itemize}
 
 \entry{Project Altair --- Software Sub-team Member}{Since 2024}
 {IUT's Mars Rover Team}{Dhaka, Bangladesh}
 \begin{itemize}
-  \item Worked on the rover's ROS-based automation pipeline for subsystem control and coordination --- fixed bugs and improved overall performance
-  \item Worked on rover OS-level integration and embedded automation for the rover's onboard system
+  \item Diagnosed and resolved critical bugs in the rover's ROS-based automation pipeline, improving subsystem control, coordination, and overall runtime reliability
+  \item Built OS-level integration and embedded automation for the rover's onboard control system
 \end{itemize}
 
-% ============================== PROJECTS =================================
+% ============================== PROJECTS ====================================
 \section{Projects}
+
+\textbf{Sada} \;\textbar\; C++17, CMake, SQLite \;\textbar\; \link{https://github.com/rbwkai/Sada}{GitHub}
+\begin{itemize}
+  \item Designed \textbf{SAFS}, a novel spaced-repetition algorithm for an ungraded Arabic vocabulary trainer that fuses power-law forgetting curves, frequency-derived difficulty, and desirable-difficulty stabilization to schedule review without any self-reported grading --- shipped with a bundled, corpus-grounded 2,000-word frequency-ranked MSA dataset
+\end{itemize}
+
+\textbf{xLog} \;\textbar\; C++20, CMake, SQLite \;\textbar\; \link{https://github.com/rbwkai}{GitHub}
+\begin{itemize}
+  \item Architected a terminal-native productivity engine that gamifies task management via dynamic difficulty calibration (CR-EMA signal model), domain-balanced XP, and grace-token streak resilience across four task archetypes, with a strict sub-300-line modular architecture and time-budget-aware morning-block scheduling
+\end{itemize}
 
 \textbf{Girih} \;\textbar\; C++, OOP \;\textbar\; \link{https://github.com/rbwkai}{GitHub}
 \begin{itemize}
-  \item A declarative C++ geometry engine --- compose points, lines, and circles as OOP primitives, drive them with parametric \texttt{Value} objects, and animate via keyframed interpolation, rendering procedural math animations in real time at 60 FPS at HD resolution
-\end{itemize}
-
-\textbf{Musafir} \;\textbar\; React Native, Full Stack \;\textbar\; \link{https://github.com/rbwkai}{GitHub}
-\begin{itemize}
-  \item Offline-first Islamic super-app (34 screens) featuring ILM, a RAG-based AI chatbot (LangChain, Ollama Llama 3.2, ChromaDB) trained on classical Islamic scholarship, for sourced Qur'an, tafsir, and hadith Q\&A
-  \item Semantic Qur'an \& Hadith search via BGE embeddings with cross-encoder reranking, plus GPS-based Hanafi prayer automation (salah tracking, Qasr travel mode)
+  \item Engineered a declarative C++ geometry engine that composes points, lines, and circles as OOP primitives, drives them with parametric \texttt{Value} objects, and renders keyframed procedural math animations in real time at 60 FPS, HD resolution
 \end{itemize}
 
 \textbf{Pookieping} \;\textbar\; MERN Stack, Security \;\textbar\; \link{https://github.com/rbwkai}{GitHub}
 \begin{itemize}
-  \item A deliberately vulnerable full-stack social wall (MERN, JWT auth) built as an XSS playground --- a toggleable sanitization layer flips between vulnerable and hardened rendering to demonstrate stored-XSS exploitation and defense
+  \item Built a deliberately vulnerable MERN social wall (JWT auth) as an XSS training ground, with a toggleable sanitization layer that switches between vulnerable and hardened rendering to demonstrate stored-XSS exploitation and defense
 \end{itemize}
 
-% ========================== TECHNICAL SKILLS ==============================
+% ========================== TECHNICAL SKILLS ================================
 \section{Technical Skills}
 \begin{tabularx}{\textwidth}{@{}l X@{}}
-  \textbf{Languages:} & C++, Python, Java, Rust \\[2pt]
+  \textbf{Languages:} & C++ (11--20), Python, Java, Rust \\[2pt]
   \textbf{Web \& Backend:} & Spring Boot, React, React Native, Node.js/Express, MERN Stack \\[2pt]
-  \textbf{Databases:} & PostgreSQL, SQL \\[2pt]
-  \textbf{Systems \& Tools:} & Linux, Bash, Git, ROS, Raspberry Pi, CTF / Web Security Fundamentals \\
+  \textbf{Databases:} & PostgreSQL, SQLite, SQL \\[2pt]
+  \textbf{Systems \& Tools:} & Linux, Bash, Git, CMake, ROS, Raspberry Pi, CTF / Web Security Fundamentals \\
 \end{tabularx}
 
-% ========================== BEYOND THE TECHNICAL ===========================
+% ========================== BEYOND THE TECHNICAL =============================
 \section{Beyond the Technical}
-Advanced calisthenics athlete; traditional \& digital artist with 1 yr hobby experience in 3D art (Blender); combat sports, origami, and Arabic learner; speedcuber (14.41s official WCA personal best).
+Multidisciplinary artist --- sketching, digital illustration, 3D art (Blender), origami; learning Arabic; speedcuber (14.41s WCA personal best); advanced calisthenics (full planche, front lever) and combat athlete (MMA, Taekwondo).
 
 \end{document}
